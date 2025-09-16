@@ -4,6 +4,6 @@ obj/
 .vs/
 *.suo
 *.user
-Saída-Depuração
+Saída-Depuração.txt
 appsettings.Development.json
 appsettings.json
