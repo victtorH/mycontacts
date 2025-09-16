@@ -1,0 +1,8 @@
+﻿@media (max-width: 900px) {
+    
+    .btn-sm {
+        width: 100px;
+        margin: 5px 0px !important;
+    }
+
+}

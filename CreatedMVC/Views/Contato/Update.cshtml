@@ -1,0 +1,34 @@
+﻿@model ContatoModel
+@{
+    ViewData["Title"] = "Alterar contatos";
+}
+<div class="container edit-form-container">
+    <a asp-controller="Contato" asp-action="Index" class="back-link" aria-label="Voltar para a lista">
+        <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z" />
+        </svg>
+    </a>
+    <div class="edit-form-card">
+      
+        <h2 class="text-center mb-4">Editar Contato</h2>
+        <form asp-controller="Contato" asp-action="Update" method="post">
+           
+            <div class="mb-3">
+                <label for="nome" class="edit-form-label">Nome</label>
+                <input type="text" asp-for="Name" class="form-control edit-form-input" id="nome">
+                @Html.ValidationMessageFor(x => x.Name)
+            </div>
+            <div class="mb-3">
+                <label for="email" class="edit-form-label">E-mail</label>
+                <input type="email"  asp-for="Email" class="form-control edit-form-input" id="email">
+                @Html.ValidationMessageFor(x => x.Email)
+            </div>
+            <div class="mb-4">
+                <label for="contato" class="edit-form-label">Contato</label>
+                <input type="tel" asp-for="tel" class="form-control edit-form-input" id="contato">
+                @Html.ValidationMessageFor(x => x.tel)
+            </div>
+            <button type="submit" asp-route-id="@Model.id" class="btn edit-submit-button">Salvar Alterações</button>
+        </form>
+    </div>
+</div>

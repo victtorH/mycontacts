@@ -1,0 +1,9 @@
+
+bin/
+obj/
+.vs/
+*.suo
+*.user
+Saida-Depuracao.txt
+appsettings.Development.json
+appsettings.json

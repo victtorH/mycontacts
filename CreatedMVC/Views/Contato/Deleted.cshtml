@@ -1,0 +1,32 @@
+﻿@model ContatoModel
+@{
+    ViewData["Title"] = "Criar contatos";
+}
+        <a asp-controller="Contato" asp-action="Index" class="back-link" aria-label="Voltar para a lista">
+            <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z" />
+            </svg>
+        </a>
+<h2 class="text-center mb-4">Excluir Contato</h2>
+<div class="delete-form-warning">
+    <svg xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)" width="24" height="24" fill="currentColor" class="bi bi-exclamation-triangle-fill" viewBox="0 0 16 16" style="margin-right: 0.5rem; vertical-align: middle;">
+        <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+    </svg>
+    Esta ação apagará o contato permanentemente. Tem certeza?
+</div>
+<form asp-controller="Contato" asp-action="Deleted" method="post">
+    <input type="hidden" asp-for="id"/>
+<div class="mb-3">
+    <label class="delete-form-label">Nome:</label>
+        <input type="text" asp-for="Name" class="delete-form-info" disabled>
+</div>
+<div class="mb-3">
+    <label class="delete-form-label">E-mail:</label>
+        <input type="text" asp-for="Email" class="delete-form-info" disabled>
+</div>
+<div class="mb-4">
+    <label class="delete-form-label">Contato:</label>   
+    <input type="text" asp-for="tel" class="delete-form-info" disabled>
+</div>
+<button type="submit" class="btn delete-form-confirm-button">Confirmar Exclusão</button>
+</form>

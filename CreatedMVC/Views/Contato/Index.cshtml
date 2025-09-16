@@ -1,0 +1,69 @@
+﻿@model List<ContatoModel>
+@{
+    ViewData["Title"] = "Lista de contatos";
+}
+
+   <section class="container">
+
+    @if (TempData["MensagemSucesso"] != null)
+    {
+        <div id="meuAlerta" class="alert alert-success alert-dismissible fade show" role="alert">
+            @TempData["MensagemSucesso"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    }
+
+    @if(TempData["MensagemErro"] != null)
+    {
+        <div id="meuAlerta" class="alert alert-danger alert-dismissible fade show" role="alert">
+        @TempData["MensagemErro"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    }
+
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="mb-0">Lista de Contatos</h2>
+        <a asp-controller="Contato" asp-action="Created" class="btn btn-add-contact">
+            + Adicionar Contato
+        </a>
+    </div>
+
+        <div class="table-responsive">
+            <table  class="table table-hover table-custom">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Nome</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Celular</th>
+                    <th scope="row" class="text-center">Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if(Model != null && Model.Any())
+                    {
+                        foreach (var contato in Model)
+                        {
+                            <tr>
+                                <td> </td>
+                                <td>@contato.Name</td>
+                                <td>@contato.Email</td>
+                                <td>@contato.tel</td>
+                                <td class="text-center">
+                                    <a asp-controller="Contato" asp-action="Update" asp-route-id="@contato.id" class="btn btn-sm btn-primary me-2">Editar</a>
+                                <a asp-controller="Contato" asp-action="Deleted" asp-route-id="@contato.id" class="btn btn-sm btn-danger">Excluir</a>
+                                </td>
+                            </tr>
+                        }
+                    }
+                    else
+                    {
+                        <tr>
+                        <td colspan="5" class="text-center"><strong>Nenhum contato encontrado.</strong></td>
+                        </tr>
+                }
+                </tbody>
+            </table>
+        </div>
+    </section>
+
