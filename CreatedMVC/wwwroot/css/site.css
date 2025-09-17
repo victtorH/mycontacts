@@ -308,11 +308,15 @@ width:70% !important;
 }
 
 .edit-form-card {
+    width:60%;
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-40%);
     background-color: #fff;
     padding: 2.5rem;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    position: relative;
 }
 
 .edit-form-label {

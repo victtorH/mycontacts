@@ -1,8 +1,140 @@
 ﻿@media (max-width: 900px) {
-    
+    .container {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .table-custom th,
+    .table-custom td {
+        padding: 0.75rem 1.25rem;
+    }
+
+    .table-custom th {
+        font-size: 1rem;
+    }
+
+    .table-custom td {
+        font-size: 0.95rem;
+    }
+
     .btn-sm {
         width: 100px;
         margin: 5px 0px !important;
     }
 
+
+    }
+/*para até 700px*/
+@media (max-width: 700px){
+
+    body{
+        margin:0px;
+    }
+
+    /*para o card*/
+    .welcome-card {
+        width: 90%;
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0px;
+        margin: auto;
+    }
+
+    /* Reduz o tamanho da fonte do título e subtítulo */
+    .welcome-title {
+        font-size: 3rem;
+    }
+
+    .welcome-subtitle {
+        font-size: 1.2rem;
+    }
+
+    /* Ajustes para o botão CTA */
+    .cta-button {
+        width:300px;
+    }
+
+    /* Ajusta o tamanho e posição dos SVGs de fundo */
+    .svg-circle {
+        width: 100px;
+        height: 100px;
+        top: 20%;
+        left: 5%;
+    }
+
+    .svg-square {
+        width: 120px;
+        height: 120px;
+        bottom: 5%;
+        right: 30%;
+    }
+    /*para tablet*/
+    .table-custom {
+        border-collapse: collapse; /* Força as bordas a colapsarem */
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    .table-responsive-tablet {
+        border: 1px solid #dee2e6;
+        border-radius: 12px;
+        overflow-x: auto; /* Permite o rolamento horizontal */
+    }
+
+        .table-responsive-tablet table {
+            width: 700px; /* Força a tabela a ter uma largura mínima para o scroll funcionar */
+        }
+
+    /* Oculta o cabeçalho original da tabela em telas pequenas */
+    .table-custom thead {
+        display: none;
+    }
+
+    /* Transforma as células em blocos para melhor exibição */
+    .table-custom tbody,
+    .table-custom tr,
+    .table-custom td {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .table-custom tr {
+        border: 1px solid #dee2e6;
+        margin: 30px auto;
+        border-radius: 2em;
+        width: 90%;
+        box-shadow:inset 1px 1px 10px 2px rgb(255, 255, 255);
+    }
+
+    .table-custom tbody tr:hover {
+        background-color: rgb(255, 255, 255);
+    }
+
+    /* Estiliza cada célula para mostrar a informação do cabeçalho */
+    .table-custom td {
+        position: relative;
+        text-align: justify;
+        border-bottom: none;
+    }
+
+        /* Pseudo-elemento para adicionar o nome da coluna */
+        .table-custom td::before {
+            content: attr(data-label);
+            position: absolute;
+            right:0;
+            top: 0;
+            width: 50%;
+            padding: 1rem;
+            font-weight: bold;
+            text-align: left;
+            color: #343a40;
+        }
+
+    .edit-form-card {
+        width: 80%;
+    }
 }
