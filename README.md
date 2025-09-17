@@ -4,7 +4,7 @@
 
 <br>
 
-## Funcionalidades
+## Funcionalidades 😂
 
 - **Listagem de Contatos**: Exibe uma lista de todos os contatos cadastrados.
 - **Adicionar Novo Contato**: Permite ao usuário adicionar um novo contato com informações como nome, e-mail e telefone.
