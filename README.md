@@ -93,4 +93,3 @@ dotnet run
   - `CreatedMVC.csproj`: Contém a string de conexão para o banco de dados, que é configurada para o SQL Server.
   - `Program.cs`: Ponto de entrada da aplicação. Ele configura os serviços da aplicação, injeta o contexto do banco de dados (`BancoContext`) e o repositório (`ContatoRepositorio`). A string de conexão do `appsettings.json` é utilizada para configurar o contexto do banco de dados.
     
-Espero que este rascunho ajude! Você pode adicionar mais detalhes sobre a arquitetura, telas do projeto (com screenshots, se tiver), e como contribuir.
