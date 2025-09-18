@@ -8,7 +8,8 @@ env:
   AZURE_WEBAPP_PACKAGE_PATH: .\published
   CONFIGURATION: Release
   DOTNET_CORE_VERSION: 8.0.x
-  WORKING_DIRECTORY: .
+  WORKING_DIRECTORY: CreatedMVC
+
 jobs:
   build:
     runs-on: windows-latest
@@ -19,15 +20,17 @@ jobs:
       with:
         dotnet-version: ${{ env.DOTNET_CORE_VERSION }}
     - name: Restore
-      run: dotnet restore "${{ env.WORKING_DIRECTORY }}"
+      run: dotnet restore
+      working-directory: ${{ env.WORKING_DIRECTORY }}
     - name: Build
-      run: |
-        cd CreatedMVC
-        dotnet build --configuration Release --no-restore
+      run: dotnet build --configuration Release --no-restore
+      working-directory: ${{ env.WORKING_DIRECTORY }}
     - name: Test
-      run: dotnet test "${{ env.WORKING_DIRECTORY }}" --no-build
+      run: dotnet test --no-build
+      working-directory: ${{ env.WORKING_DIRECTORY }}
     - name: Publish
-      run: dotnet publish "${{ env.WORKING_DIRECTORY }}" --configuration ${{ env.CONFIGURATION }} --no-build --output "${{ env.AZURE_WEBAPP_PACKAGE_PATH }}"
+      run: dotnet publish --configuration ${{ env.CONFIGURATION }} --no-build --output "${{ env.AZURE_WEBAPP_PACKAGE_PATH }}"
+      working-directory: ${{ env.WORKING_DIRECTORY }}
     - name: Publish Artifacts
       uses: actions/upload-artifact@v4
       with:
