@@ -5,7 +5,7 @@ on:
     - main
 env:
   AZURE_WEBAPP_NAME: mycontacts
-  AZURE_WEBAPP_PACKAGE_PATH: .\published
+  AZURE_WEBAPP_PACKAGE_PATH: published
   CONFIGURATION: Release
   DOTNET_CORE_VERSION: 8.0.x
   WORKING_DIRECTORY: CreatedMVC
@@ -35,7 +35,7 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: webapp
-        path: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
+        path: ${{ env.WORKING_DIRECTORY }}/${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
   deploy:
     runs-on: windows-latest
     needs: build
