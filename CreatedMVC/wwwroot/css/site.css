@@ -29,7 +29,7 @@ body {
 }
 
 body {
-    background-color: #f8f9fa; /* Um cinza claro para o fundo */
+    background-color: #f8f9fa;
     padding: 2rem;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
@@ -72,7 +72,7 @@ width:70% !important;
     color: #f8f9fa;
     border: none;
     padding: 1rem 2.5rem;
-    border-radius: 50px; /* Botão em forma de pílula para diferenciação */
+    border-radius: 50px; 
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -95,7 +95,7 @@ width:70% !important;
     left: 20%;
     width: 200px;
     height: 200px;
-    fill: #adb5bd; /* Cor cinza suave */
+    fill: #adb5bd;
     opacity: 0.2;
     animation: moveCircle 10s infinite ease-in-out;
     z-index: 0;
@@ -107,7 +107,7 @@ width:70% !important;
     right: 15%;
     width: 180px;
     height: 180px;
-    fill: #007bff; /* Cor de destaque */
+    fill: #007bff;
     opacity: 0.1;
     transform: rotate(45deg);
     animation: rotateSquare 12s infinite linear;
@@ -151,36 +151,34 @@ width:70% !important;
 .table-custom {
     border-collapse: separate;
     border-spacing: 0;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Sutil sombra para destacar a tabela */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); 
     border-radius: 12px;
-    overflow: hidden; /* Garante que os cantos arredondados sejam aplicados */
-}
+    overflow: hidden; 
 
     .table-custom thead {
-        background-color: #343a40; /* Preto escuro para o cabeçalho */
-        color: #fff; /* Texto branco para contraste */
+        background-color: #343a40; 
+        color: #fff; 
     }
 
     .table-custom th, .table-custom td {
-        padding: 1rem 1.5rem; /* Aumenta o padding para mais "ar" */
-        border-bottom: 1px solid #dee2e6; /* Linha sutil entre as linhas */
-    }
+        padding: 1rem 1.5rem; 
+        border-bottom: 1px solid #dee2e6; 
 
     .table-custom tbody tr:hover {
-        background-color: #e9ecef; /* Um cinza mais escuro ao passar o mouse */
+        background-color: #e9ecef; 
     }
 
     .table-custom tbody tr:last-child td {
-        border-bottom: none; /* Remove a borda da última linha */
+        border-bottom: none; 
     }
 
 .btn-action-edit {
-    color: #007bff; /* Azul primário */
+    color: #007bff; 
     border: 1px solid #007bff;
     background-color: transparent;
     padding: 0.35rem 0.75rem;
     border-radius: 6px;
-    font-size: 0.875rem; /* Fonte um pouco menor */
+    font-size: 0.875rem; 
     transition: all 0.2s ease-in-out;
 }
 
@@ -195,7 +193,7 @@ width:70% !important;
     }
 
 .btn-action-delete {
-    color: #dc3545; /* Vermelho para a ação de exclusão */
+    color: #dc3545; 
     border: 1px solid #dc3545;
     background-color: transparent;
     padding: 0.35rem 0.75rem;
@@ -214,7 +212,6 @@ width:70% !important;
         border-color: #c82333;
     }
 
-/* Estilo para o botão de "Adicionar Contato" */
 .btn-add-contact {
     background-color: #007bff;
     color: #fff;
@@ -254,7 +251,7 @@ width:70% !important;
 }
 
 .form-page-container {
-    max-width: 600px; /* Largura reduzida para o formulário */
+    max-width: 600px;
    
 }
 
@@ -290,7 +287,7 @@ width:70% !important;
     border-radius: 8px;
     font-weight: 600;
     transition: background-color 0.3s ease, transform 0.2s ease;
-    width: 100%; /* Botão em largura total */
+    width: 100%;
 }
 
     .form-submit-button:hover {
@@ -387,7 +384,7 @@ width:70% !important;
 }
 
 .delete-form-warning {
-    color: #dc3545; /* Vermelho para indicar perigo */
+    color: #dc3545; 
     font-weight: bold;
     margin-bottom: 1.5rem;
     text-align: center;
@@ -395,7 +392,7 @@ width:70% !important;
 
 .delete-form-label {
     font-weight: bold;
-    color: #495057; /* Cinza mais escuro para ênfase */
+    color: #495057; 
 }
 
 .delete-form-info {
@@ -404,11 +401,11 @@ width:70% !important;
     margin-bottom: 2rem;
     border: 1px solid #ced4da;
     border-radius: 8px;
-    background-color: #f8f9fa; /* Cinza claro para destacar os dados */
+    background-color: #f8f9fa; 
 }
 
 .delete-form-confirm-button {
-    background-color: #dc3545; /* Vermelho como cor primária para confirmar a exclusão */
+    background-color: #dc3545; 
     color: #fff;
     border: none;
     padding: 0.75rem 1.5rem;
@@ -416,8 +413,8 @@ width:70% !important;
     font-weight: 600;
     transition: background-color 0.3s ease, transform 0.2s ease;
     width: 65%;
-    display: block; /* Garante que o botão se comporte como um bloco */
-    margin: 0 auto; /* Centraliza o botão horizontalmente */
+    display: block; 
+    margin: 0 auto; 
 }
 
     .delete-form-confirm-button:hover {
@@ -429,17 +426,17 @@ width:70% !important;
 
 /*   Botão para voltar a contato usado na view Created e Deleted*/
 .back-link {
-    position: absolute; /* Posição absoluta em relação ao .form-card */
+    position: absolute;
     top: 6rem;
     left: 3rem;
-    color: #495057; /* Um cinza escuro para contraste */
+    color: #495057; 
     transition: color 0.2s ease-in-out, transform 0.2s ease;
     font-size: 1.25rem;
     text-decoration: none;
 }
 
     .back-link:hover {
-        color: #007bff; /* Cor azul de destaque ao passar o mouse */
-        transform: translateX(-4px); /* Efeito sutil de movimento */
+        color: #007bff; 
+        transform: translateX(-4px); 
     }
 
