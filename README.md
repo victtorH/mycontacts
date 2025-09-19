@@ -2,6 +2,8 @@
 
 **MyContacts** é uma aplicação web de gerenciamento de contatos desenvolvida em **ASP.NET Core MVC**. O projeto permite a criação, visualização, edição e exclusão de contatos, utilizando o **Entity Framework Core** para a persistência de dados em um banco de dados **SQL Server**.
 
+Para garantir boas práticas de desenvolvimento, criei uma **branch** de desenvolvimento dedicada. Além disso, a aplicação utiliza um **pipeline CI/CD** com **Azure**, **Git** e **GitHub Actions** para hospedagem e gerenciamento, garantindo um fluxo de trabalho eficiente e automatizado.
+
 <br>
 
 ## Funcionalidades 
