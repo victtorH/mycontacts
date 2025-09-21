@@ -42,10 +42,10 @@ width:70% !important;
 /* Home */
 
 .welcome-card {
-    background-color: #fff;
+    background-color: #ffffffff;
     padding: 6rem 10rem;
     border-radius: 16px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+   /* box-shadow: 1px 1px 24px .5px rgba(0, 0, 0, 0.1),-10px -10px 24px .5px rgba(255, 255, 255, 1), inset 1px 1px 24px .5px rgba(0, 0, 0, 0.03), inset -10px -10px 24px .5px rgba(255, 255, 255, 1);*/
     text-align: center;
     z-index: 10;
     position: absolute;
@@ -55,10 +55,10 @@ width:70% !important;
 }
 
 .welcome-title {
-    font-size: 3rem;
-    font-weight: 700;
+    font-size: 4rem;
+    font-weight: 900;
     color: #343a40;
-    margin-bottom: 0.5rem;
+    margin-bottom: 2rem;
 }
 
 .welcome-subtitle {
@@ -67,12 +67,47 @@ width:70% !important;
     margin-bottom: 2rem;
 }
 
+.divisor{
+display:flex;
+align-items:center;
+justify-content:center;
+position:absolute;
+border-radius: 0px 15px 0px 15px;
+width:45%;
+height:25%;
+left:0%;
+bottom:0%;
+background-color:#f8f9fa;
+}
+.divisor::before{
+    content:" ";
+    width:2rem;
+    height:2rem;
+    background:transparent;
+    position:absolute;
+    border-radius:50%;
+    left:calc(100% );
+    top:calc(100% - 35%);
+     box-shadow: -10px 10px 0 0 #f8f9fa;
+}
+.divisor::after{
+    content:" ";
+    width:2rem;
+    height:2rem;
+    background:transparent;
+    position:absolute;
+    border-radius:50%;
+    left:calc(0%);
+    top:calc(0% - 35%);
+     box-shadow: -10px 10px 0 0 #f8f9fa;
+}
+
 .cta-button {
     background-color: #007bff;
     color: #f8f9fa;
     border: none;
     padding: 1rem 2.5rem;
-    border-radius: 50px; /* Botão em forma de pílula para diferenciação */
+    border-radius: 50px; 
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -157,7 +192,7 @@ width:70% !important;
 }
 
     .table-custom thead {
-        background-color: #343a40; /* Preto escuro para o cabeçalho */
+        background-color: #343a40; /* Preto escuro para o cabeï¿½alho */
         color: #fff; /* Texto branco para contraste */
     }
 
@@ -171,11 +206,11 @@ width:70% !important;
     }
 
     .table-custom tbody tr:last-child td {
-        border-bottom: none; /* Remove a borda da última linha */
+        border-bottom: none; /* Remove a borda da ï¿½ltima linha */
     }
 
 .btn-action-edit {
-    color: #007bff; /* Azul primário */
+    color: #007bff; /* Azul primï¿½rio */
     border: 1px solid #007bff;
     background-color: transparent;
     padding: 0.35rem 0.75rem;
@@ -195,7 +230,7 @@ width:70% !important;
     }
 
 .btn-action-delete {
-    color: #dc3545; /* Vermelho para a ação de exclusão */
+    color: #dc3545; /* Vermelho para a aï¿½ï¿½o de exclusï¿½o */
     border: 1px solid #dc3545;
     background-color: transparent;
     padding: 0.35rem 0.75rem;
@@ -214,7 +249,7 @@ width:70% !important;
         border-color: #c82333;
     }
 
-/* Estilo para o botão de "Adicionar Contato" */
+/* Estilo para o botï¿½o de "Adicionar Contato" */
 .btn-add-contact {
     background-color: #007bff;
     color: #fff;
@@ -254,7 +289,7 @@ width:70% !important;
 }
 
 .form-page-container {
-    max-width: 600px; /* Largura reduzida para o formulário */
+    max-width: 600px; /* Largura reduzida para o formulï¿½rio */
    
 }
 
@@ -290,7 +325,7 @@ width:70% !important;
     border-radius: 8px;
     font-weight: 600;
     transition: background-color 0.3s ease, transform 0.2s ease;
-    width: 100%; /* Botão em largura total */
+    width: 100%; /* Botï¿½o em largura total */
 }
 
     .form-submit-button:hover {
@@ -395,7 +430,7 @@ width:70% !important;
 
 .delete-form-label {
     font-weight: bold;
-    color: #495057; /* Cinza mais escuro para ênfase */
+    color: #495057; /* Cinza mais escuro para ï¿½nfase */
 }
 
 .delete-form-info {
@@ -408,7 +443,7 @@ width:70% !important;
 }
 
 .delete-form-confirm-button {
-    background-color: #dc3545; /* Vermelho como cor primária para confirmar a exclusão */
+    background-color: #dc3545; /* Vermelho como cor primï¿½ria para confirmar a exclusï¿½o */
     color: #fff;
     border: none;
     padding: 0.75rem 1.5rem;
@@ -416,8 +451,8 @@ width:70% !important;
     font-weight: 600;
     transition: background-color 0.3s ease, transform 0.2s ease;
     width: 65%;
-    display: block; /* Garante que o botão se comporte como um bloco */
-    margin: 0 auto; /* Centraliza o botão horizontalmente */
+    display: block; /* Garante que o botï¿½o se comporte como um bloco */
+    margin: 0 auto; /* Centraliza o botï¿½o horizontalmente */
 }
 
     .delete-form-confirm-button:hover {
@@ -427,9 +462,9 @@ width:70% !important;
 
 
 
-/*   Botão para voltar a contato usado na view Created e Deleted*/
+/*   Botï¿½o para voltar a contato usado na view Created e Deleted*/
 .back-link {
-    position: absolute; /* Posição absoluta em relação ao .form-card */
+    position: absolute; /* Posiï¿½ï¿½o absoluta em relaï¿½ï¿½o ao .form-card */
     top: 6rem;
     left: 3rem;
     color: #495057; /* Um cinza escuro para contraste */

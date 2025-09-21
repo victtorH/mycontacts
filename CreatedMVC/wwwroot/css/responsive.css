@@ -31,7 +31,6 @@
         margin:0px;
     }
 
-    /*para o card*/
     .welcome-card {
         width: 90%;
         height: 500px;
@@ -43,7 +42,6 @@
         margin: auto;
     }
 
-    /* Reduz o tamanho da fonte do título e subtítulo */
     .welcome-title {
         font-size: 3rem;
     }
@@ -52,12 +50,23 @@
         font-size: 1.2rem;
     }
 
-    /* Ajustes para o botão CTA */
-    .cta-button {
-        width:300px;
+    .divisor{
+        background-color:#fff;
+        border-radius:0%;
+        position:static;
+    }
+    .divisor::before{
+        display:none;
+    }
+     .divisor::after{
+        display:none;
     }
 
-    /* Ajusta o tamanho e posição dos SVGs de fundo */
+    .cta-button {
+        width:300px;
+        white-space:nowrap;
+    }
+
     .svg-circle {
         width: 100px;
         height: 100px;
@@ -73,7 +82,7 @@
     }
     /*para tablet*/
     .table-custom {
-        border-collapse: collapse; /* Força as bordas a colapsarem */
+        border-collapse: collapse; 
         border-radius: 0;
         box-shadow: none;
     }
@@ -81,19 +90,17 @@
     .table-responsive-tablet {
         border: 1px solid #dee2e6;
         border-radius: 12px;
-        overflow-x: auto; /* Permite o rolamento horizontal */
+        overflow-x: auto;
     }
 
         .table-responsive-tablet table {
-            width: 700px; /* Força a tabela a ter uma largura mínima para o scroll funcionar */
+            width: 700px; 
         }
 
-    /* Oculta o cabeçalho original da tabela em telas pequenas */
     .table-custom thead {
         display: none;
     }
 
-    /* Transforma as células em blocos para melhor exibição */
     .table-custom tbody,
     .table-custom tr,
     .table-custom td {
