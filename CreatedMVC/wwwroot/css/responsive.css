@@ -32,7 +32,10 @@
         margin:0px;
     }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> dev
     .welcome-card {
         width: 90%;
         height: 500px;
@@ -52,9 +55,27 @@
         font-size: 1.2rem;
     }
 
+<<<<<<< HEAD
 
     .cta-button {
         width:300px;
+=======
+    .divisor{
+        background-color:#fff;
+        border-radius:0%;
+        position:static;
+    }
+    .divisor::before{
+        display:none;
+    }
+     .divisor::after{
+        display:none;
+    }
+
+    .cta-button {
+        width:300px;
+        white-space:nowrap;
+>>>>>>> dev
     }
 
     .svg-circle {
@@ -81,19 +102,29 @@
     .table-responsive-tablet {
         border: 1px solid #dee2e6;
         border-radius: 12px;
+<<<<<<< HEAD
         overflow-x: auto; 
+=======
+        overflow-x: auto;
+>>>>>>> dev
     }
 
         .table-responsive-tablet table {
             width: 700px; 
         }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> dev
     .table-custom thead {
         display: none;
     }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> dev
     .table-custom tbody,
     .table-custom tr,
     .table-custom td {
